@@ -1,22 +1,34 @@
 <?php
-    namespace app\controllers;
-    use app\core\route;
-/*enregistrement des different donnees des clients*/
-    $nomClient=htmlspecialchars($_POST['nom']);
-    echo $nomClient;
-    $prenomClient=htmlspecialchars($_POST['prenom']);
-    $sexClient=htmlspecialchars($_POST['sexe']);
-    $ageClient=htmlspecialchars($_POST['age']);
-    $dateclient=htmlspecialchars($_POST['date']);
-/**/
+namespace app\controllers;
+require_once "app/Models/client.php";
+public class saveClient1{ 
+    public function enregister(){
+    if($_SERVER['REQUEST_METHODE']=='POST'){
+        $nom=$_POST['nom']?? '';
+        $nom = htmlspecialchars($nom);
+        $prenom=$_POST['prenom']?? '';
+        $prenom = htmlspecialchars($prenom);
+
+        $date=$_POST['date']?? '';
+        $date = htmlspecialchars($date);
+        $sex=$_POST['sex']?? '';
+        $sex = htmlspecialchars($sex);
+
+        if(empty($nom) & empty($prenom) & empty($date) & empty($sex)){
+
+            echo "Erreur: les champs doivent etre obligatoirement remplie";
+        }
+//envoyer les donnees au model
+        $client= new client();
+        $client->getNom();
+        $client->getPrenom();
+        $client->getSex();
+        $client->getAge();
+
+    }
 
 
-    $client1=new client;
-    $client1->getNom();
-    $client1->getPrenom();
-    $client1->getAge();
-    $client1->getDAte();
-    $client1->getSex();
+}
+}
 
- include __DIR__ .'../Views/clientView.php';
 ?>

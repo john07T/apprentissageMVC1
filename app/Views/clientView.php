@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../controllers/clientConrolle.php" method="post">
+
+    <form action="/saveClient" method="post">
     <label for="nom">nom</label><input type="text" name="nom"><br>
     <label for="prenom">prenom</label><input type="text" name="prenom"><br>
-    <label for="date">date de naissance</label><input type="text" name="date"><br>
-    <label for="nom">sexe</label><input type="checkbox" name='sex'>M<br>
-    <input type="checkbox" name=sex>F<br>
+    <label for="date">date de naissance</label><input type="date" name="date"><br>
+    <label for="nom">sexe</label><br><input type="radio" name='sex' value="homme">M<br>
+    <input type="radio" name='sex' value="femme">F<br>
     <input type="submit" value="envoyer">
 
 

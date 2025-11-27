@@ -1,8 +1,8 @@
 <?php
- namespace app\core\router;
+ namespace app\router\router;
     use app\models\client;
     use app\models\admin;
-    if(!isset($_POST[nom])){ 
+    if(isset($_POST['nom'])){ 
     /*enregistrement des different donnees des clients*/
         $nomClient=htmlspecialchars($_POST['nom']);
          echo $nomClient;
@@ -14,13 +14,15 @@
 /**/
 
     $client1=new client;
-    $client1->getNom();
-    $client1->getPrenom();
-    $client1->getAge();
-    $client1->getDAte();
-    $client1->getSex();
+    $client1->setNom();
+    $client1->setPrenom();
+    $client1->setAge();
+    $client1->setDAte();
+    $client1->setSex();
     //redirige les donnees dans la pages indiques
-    header(Location :app/Models/client.php);
+    include __DIR__ .'/../controllers/clientControlle.php';
+    header("Location :app/Models/clientControlelle.php"); 
+
     exit;
 
 
