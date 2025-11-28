@@ -1,2 +1,3 @@
 # apprentissageMVC1
-juste pour acquerir les connaissance
+\\***Analyse du projet MVc sur la getion des taxis***\\
+le client apres s'etre enregistre dans l'application,il doit s'authentifier,l'interface vas devoir le rediger dans l'interface ou il vas effectuer sses reservation, pendant sa reservation, mettra son trajet  c'est a dire sont trajet de depart et celui de l'arriver,il verifira si le chauffeur est disponible afin de pouvoir realiser son trajet sans oublier que le systeme lui proposera le prix de chaque trajet ("j'ai pas encore le niveau pour faire payer le client a travers le systeme")l'administrateur gere la gestion administrative du systeme comme gerer les clients du systeme,gerer les chauffeurs, gerer la disponibilites du chauffeur afin de les mettre dans le systeme et on ne peut oublier que l'admin peut etre aussi un client.
