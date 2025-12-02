@@ -1,6 +1,6 @@
 <?php
 namespace app\Models;
-require_once "controllers/connectBD.php";
+require_once "/controllers/connectBD.php";
 class client{
 
     private string $nom;
@@ -19,7 +19,7 @@ class client{
 
     }
     /*obtention des differents donnees */
-   public function setNom(string $nom): void {
+    public function setNom(string $nom): void {
     $this->nom = $nom;
 }
 
@@ -50,7 +50,7 @@ public function save(){
     $save->bindParam(':age',$this->age);
     $save->bindParam(':date',$this->date);
 
+      $save->execute();    
 }
-
 }
 ?>
