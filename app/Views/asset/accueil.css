@@ -1,0 +1,43 @@
+body{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/*gerer l'entete*/
+.entete{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 500rem;
+    height: 5rem;
+    margin: 0;
+    padding: 30px;
+    gap: 8%;
+}
+/*travailler sur l'ensemble des bouttons*/
+a{
+    gap: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 20%;
+    color: black;
+
+    transition: transform 1s, background 0.4s, box-shadow 2s;
+
+}
+a:hover{
+    box-shadow: 2px 2px 2px yellow;
+    background: yellow;
+    transform: translate(2px);
+}
+.corps{
+ background-color: rgb(145, 179, 179);
+    display: flex;
+    flex-direction: row;
+    width: 500rem;
+    height: 14rem;
+    margin: 0;
+    padding: 30px;
+    gap: 20ox;
+}
